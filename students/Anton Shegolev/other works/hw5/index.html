@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>eShop</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            Clothing store
+        </div>
+        <div class="panel">
+            <input type="text" class="goods-search" />
+            <button class="search-button" type="button">Искать</button>
+
+            <button class="cart-button" type="button">Корзина</button>
+        </div>
+    </header>
+    <div id="app">
+
+
+        <main>
+            <h1>Products</h1>
+
+
+
+            <div class="goods-item" v-for="good in filteredGoods">
+                <h3>{{ good.id_product }}</h3>
+            <!--    <p>{{ good.price }}</p> !-->
+
+            </div>
+
+            <div class="goods-item" v-model="filteredGoods">
+
+                <p>{{ filteredGoods }}</p>
+
+            </div>
+            <!--  <div><img src="/img/Shirt.jpg"></div> !-->
+        </main>
+    </div>
+</body></html>
